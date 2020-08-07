@@ -1,0 +1,72 @@
+body{
+    background: url('images/фонфон.png');
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+#header{
+    height: 300px;
+    width: 100%;
+    background: url("images/фон2.jpg") 0 -200px;
+    box-shadow:  0 -10px 8px 15px rgb(239,235,225) inset;
+    font-family: 'MyFont';
+    text-align: center;
+    font-size: 300%;
+    color: aliceblue;
+}
+#south{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: 500px;
+}
+#image{
+    float: left;
+    width: 500px;
+}
+#form{
+    min-width: 400px;
+    border-radius: 10px;
+    background: #FF1A21;
+    padding-top: 10px;
+    margin-left: 510px;
+    margin-right: 0;
+    transition-property: background-color;
+    transition-duration: 2s;
+}
+#container{
+    font-size: 150%;
+}
+#table{
+    background: rgb(92, 219, 149);
+    color: #000000;
+    padding: 7px;
+    border-radius: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+#results{
+    width: 100%;
+    text-align: center;
+}
+[name="Y"]{
+    width: 80%;
+}
+#Y{
+    text-align: center;
+}
+#X{
+    text-align: center;
+}
+[name="X"]{
+    width: 22%;
+    transform: scale(2);
+}
+#R{
+    text-align: center;
+}
+@font-face{
+    font-family: 'MyFont';
+    src:url('fonts/Breathe/Breathe-Press.ttf');
+}
+

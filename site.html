@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ПИП</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="special.css" type="text/css"/>
+    <link rel="stylesheet" href="sendAnime.css" type="text/css"/>
+    <link rel="stylesheet" href="footer.css" type="text/css"/>
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <p>Web-Programming <br>
+            Dzhukashev Daniel  P3230</p>
+    </div>
+    <div id="south">
+        <div id="image">
+            <svg width="500" height="500">
+                <path fill="#6ADCFB" d="M150 250 A100 100 0 0 0 250 350 L250 250"/>
+                <rect fill="#6ADCFB" width="200" height ="200" x ="250" y="50"/>
+                <path id="rect" fill="#6ADCFB" stroke="#6ADCFB" stroke-width = "2" d="M250 350 L450 250 L250 250"/>
+                <g id="coordLines">
+                    <path fill ="none" stroke="#000000" stroke-width = "2" d="M0 250 H 500 M250 0 v500 	   M50 245 v10 M150 245 v10 M350 245 v10 M450 245 v10
+                      M245 50 h10 M245 150 h10 M245 350 h10 M245 450 h10
+                      M240 10 L250 0 L260 10
+                      M490 240 L500 250 L490 260"/>
+                </g>
+                <g id="grafText">
+                    <text x="45" y="240">-R</text>
+                    <text x="140" y="240">-R/2</text>
+                    <text x="340" y="240">R/2</text>
+                    <text x="445" y="240">R</text>
+                    <text x="257" y="55">R</text>
+                    <text x="257" y="155">R/2</text>
+                    <text x="257" y="353">-R/2</text>
+                    <text x="257" y="453">-R</text>
+                </g>
+            </svg>
+        </div>
+
+        <div id="form">
+            <form id="my_form">
+
+                <div id="Y">
+                    <p>Y</p>
+                    <p><input name ="Y"></p>
+                </div>
+
+                <div id="X">
+                    <p>X</p>
+                    <p><input type="checkbox" name="X" value="-3" >-3
+                        <input type="checkbox" name="X" value="-2" >-2
+                        <input type="checkbox" name="X" value="-1" >-1</p>
+                    <p><input type="checkbox" name="X" value="0" >    0
+                        <input type="checkbox" name="X" value="1" >  1
+                        <input type="checkbox" name="X" value="2" >  2</p>
+                    <p><input type="checkbox" name="X" value="3" > 3
+                        <input type="checkbox" name="X" value="4" > 4
+                        <input type="checkbox" name="X" value="5" > 5</p>
+                </div>
+
+                <div id="R">
+                    <p>R</p>
+                    <input type="button" name="R" value="1">
+                    <input type="button" name="R" value="1.5">
+                    <input type="button" name="R" value="2">
+                    <input type="button" name="R" value=2.5>
+                    <input type="button" name="R" value="3">
+                </div>
+
+                <div id="body_button">
+                    <div class="button_hola" id="sendButton"><span>отправить</span></div>
+                    <div class="button_hola" id="clearButton"><span>очистить</span></div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div id="table">
+        <table id="results">
+            <tr><th>X</th><th>Y</th><th>R</th><th>Current Time</th><th>Execution Time</th><th>Result</th></tr>
+        </table>
+    </div>
+</div>
+<div id ="footer">
+    <a class="linkBlock" target="_blank" href="https://vk.com/blossompuke"><img src = 'icons/vk.png' alt=""/> VK</a>
+    <a class="linkBlock" target="_blank" href="https://instagram.com/belinracle?igshid=jv4ozb3f42km"><img src="icons/inst.png" alt=""/> INSTAGRAM</a>
+</div>
+<script src="sendHandler.js"></script>
+<script src="validator.js"></script>
+</body>
+</html>
