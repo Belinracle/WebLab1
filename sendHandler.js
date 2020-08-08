@@ -1,13 +1,13 @@
 'use strict';
 document.querySelector('#sendButton').addEventListener('click',function(){
-    var color = window.getComputedStyle(document.querySelector('#form')).backgroundColor;
-    if (color === 'rgb(0, 255, 0)')
+    let color = window.getComputedStyle(document.querySelector('#form')).backgroundColor;
+    if (color === 'rgb(0, 153, 0)')
     {
-        var X = getXvalue();
-        var Y = filterFloat(document.querySelector('[name=Y]').value.replace(",",".").trim());
-        var R = getRvalue();
-        var data = 'X='+encodeURIComponent(X) + '&Y='+ encodeURIComponent(Y)+ '&R='+encodeURIComponent(R);
-        var request = new XMLHttpRequest();
+        let X = getXvalue();
+        let Y = filterFloat(document.querySelector('[name=Y]').value.replace(",",".").trim());
+        let R = getRvalue();
+        let data = 'X='+encodeURIComponent(X) + '&Y='+ encodeURIComponent(Y)+ '&R='+encodeURIComponent(R);
+        let request = new XMLHttpRequest();
         request.open('POST','server.php', true);
         request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
         request.addEventListener("readystatechange", () =>  {
@@ -19,8 +19,8 @@ document.querySelector('#sendButton').addEventListener('click',function(){
     }
 });
 function getXvalue(){
-    var Xvalues =  document.querySelectorAll('[name=X]');
-    for (var i = 0;i<Xvalues.length;i++)
+    let Xvalues =  document.querySelectorAll('[name=X]');
+    for (let i = 0;i<Xvalues.length;i++)
         if (Xvalues[i].checked===true)
             return Xvalues[i].getAttribute('value');
 }
@@ -32,8 +32,8 @@ function filterFloat(value) {
   return 'NaN';
 }
 function getRvalue(){
-    var Rvalues = document.querySelectorAll('[name=R]');
-    for (var i = 0 ; i<Rvalues.length; i++){
+    let Rvalues = document.querySelectorAll('[name=R]');
+    for (let i = 0 ; i<Rvalues.length; i++){
         if (Rvalues[i].classList.contains('activated'))
             return Rvalues[i].getAttribute('value');
     }

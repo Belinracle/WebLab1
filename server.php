@@ -12,7 +12,7 @@ if(isset($_POST['X'])&&isset($_POST['Y'])&&isset($_POST['R'])){
     echo $result;
 }
 function getResult($x,$y,$r){
-    if ($x>=0 && $y>=0 && $x<$r&&$y<$r) return '<td bgcolor=#EDF5E1> hited </td>';
+    if ($x>=0 && $y>=0 && $x<$r&&$y<$r) return '<td  bgcolor=#EDF5E1> hited </td>';
     else if($x>=0 && $y<0 && $x<$r && $y>=($x/2-$r/2)) return '<td bgcolor=#EDF5E1> hited </td>';
     else if($x<0 && $y<0 && $x*$x+$y*$y<=$r*$r)return '<td bgcolor=#EDF5E1> hited </td>';
     else return '<td bgcolor=#FC4445>  not hited </td>';
