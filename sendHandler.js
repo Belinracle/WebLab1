@@ -1,4 +1,7 @@
 'use strict';
+let Rvalues = document.querySelectorAll('[name=R]');
+let Xvalues =  document.querySelectorAll('[name=X]');
+let point = document.querySelector('#point')
 document.querySelector('#sendButton').addEventListener('click',function(){
     let color = window.getComputedStyle(document.querySelector('#form')).backgroundColor;
     if (color === 'rgb(0, 153, 0)')
@@ -13,13 +16,18 @@ document.querySelector('#sendButton').addEventListener('click',function(){
         request.addEventListener("readystatechange", () =>  {
             if (request.readyState === 4 && request.status === 200) {
                 document.querySelector('#results').innerHTML+=request.responseText;
+                if(request.responseText.includes('not hited')){
+                    resetPoint();
+                }
+                else {
+                    setPoint(X, Y, R);
+                }
             }
         });
         request.send(data);
     }
 });
 function getXvalue(){
-    let Xvalues =  document.querySelectorAll('[name=X]');
     for (let i = 0;i<Xvalues.length;i++)
         if (Xvalues[i].checked===true)
             return Xvalues[i].getAttribute('value');
@@ -32,7 +40,6 @@ function filterFloat(value) {
   return 'NaN';
 }
 function getRvalue(){
-    let Rvalues = document.querySelectorAll('[name=R]');
     for (let i = 0 ; i<Rvalues.length; i++){
         if (Rvalues[i].classList.contains('activated'))
             return Rvalues[i].getAttribute('value');
@@ -40,4 +47,14 @@ function getRvalue(){
 }
 document.querySelector('#clearButton').addEventListener('click',function() {
     document.querySelector('#results').innerHTML = '<tr><th>X</th><th>Y</th><th>R</th><th>Current Time</th><th>Execution Time</th><th>Result</th></tr>';
+    point.innerHTML='';
 });
+function setPoint(x,y,r){
+    let cx = 250 + x/r*200;
+    let cy = 250 - y/r*200;
+    resetPoint();
+    point.innerHTML='<circle class="new" r="2" cx="'+cx+'" cy="'+cy+'" />'
+}
+function resetPoint(){
+    point.innerHTML='';
+}

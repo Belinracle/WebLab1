@@ -37,6 +37,13 @@ body{
 #container{
     font-size: 150%;
 }
+.new{
+    height: 5px;
+    width: 5px;
+    border-radius: 5px;
+    background: black;
+    animation: newAnimate .7s;
+}
 #table{
     background: rgb(92, 219, 149);
     color: #000000;
@@ -52,21 +59,23 @@ body{
 [name="Y"]{
     width: 80%;
 }
-#Y{
-    text-align: center;
-}
-#X{
+#Y,#R,#X{
     text-align: center;
 }
 [name="X"]{
     width: 22%;
     transform: scale(2);
 }
-#R{
-    text-align: center;
-}
 @font-face{
     font-family: 'MyFont';
     src:url('fonts/Breathe/Breathe-Press.ttf');
+}
+@keyframes newAnimate {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
