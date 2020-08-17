@@ -4,6 +4,8 @@
     height: 140px;
     background-color: #379683;
     padding-top: 15px;
+    position: absolute;
+    bottom: 0;
 }
 .linkBlock{
     font-family: footerFont;
